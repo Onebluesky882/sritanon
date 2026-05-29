@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/onebluesky882/local_files/myApp/sritanon/src/pre-load/homepage.tsx"],"sourcesContent":["\"use client\";\nconst Homepage = () => {\n  return <div className=\"bg-red-500\">homepage</div>;\n};\n\nexport default Homepage;\n"],"names":["Homepage","className"],"mappings":";;;;;AAAA;;AACA,MAAMA,WAAW;IACf,qBAAO,qKAAC;QAAIC,WAAU;kBAAa;;;;;;AACrC;uCAEeD"}}]
+}
