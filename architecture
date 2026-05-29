@@ -1,0 +1,53 @@
+┌──────────────────────────────┐
+│         React Overlay        │
+│ transcript / controls / ai   │
+└──────────────┬───────────────┘
+               │ Tauri IPC
+┌──────────────▼───────────────┐
+│        Tauri Backend         │
+│ audio router + orchestrator  │
+└───────┬─────────┬────────────┘
+        │         │
+        │         │
+┌───────▼───┐ ┌───▼────────────┐
+│Audio Core │ │ AI Engine      │
+│CoreAudio  │ │ mlx-whisper    │
+│BlackHole  │ │ mlx-lm         │
+│Silero VAD │ │ prompt router  │
+└───────────┘ └────────────────┘
+
+ Project Structure Node Version
+
+interview-assistant/
+│
+├── apps/
+│   └── desktop/
+│       ├── electron/
+│       │   ├── main/
+│       │   ├── preload/
+│       │   └── ipc/
+│       │
+│       ├── src/
+│       │   ├── pages/
+│       │   ├── components/
+│       │   ├── hooks/
+│       │   ├── stores/
+│       │   ├── services/
+│       │   └── main.tsx
+│       │
+│       └── package.json
+│
+├── server/
+│   ├── audio/
+│   ├── vad/
+│   ├── whisper/
+│   ├── llm/
+│   ├── pipeline/
+│   ├── events/
+│   └── index.ts
+│
+├── python/
+│   ├── whisper_server.py
+│   └── mlx_lm_server.py
+│
+└── models/
