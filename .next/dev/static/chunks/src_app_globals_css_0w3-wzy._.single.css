@@ -53,6 +53,7 @@
 @layer theme {
   :root, :host {
     --color-red-500: #fb2c36;
+    --color-amber-50: #fffbeb;
     --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
@@ -78,6 +79,7 @@
   @supports (color: lab(0% 0 0)) {
     :root, :host {
       --color-red-500: lab(55.4814% 75.0732 48.8528);
+      --color-amber-50: lab(98.6252% -.635922 8.42309);
     }
   }
 }
@@ -740,6 +742,10 @@
 
   .border-transparent {
     border-color: #0000;
+  }
+
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
   }
 
   .bg-background {
